@@ -1,0 +1,64 @@
+{
+  "cleanupPeriodDays": 99999,
+  "permissions": {
+    "allow": []
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/notify-permission.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "commit-commands@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "claude-mem@thedotmack": true,
+    "ralph-loop@claude-plugins-official": true,
+    "decomposition@kuu-marketplace": true
+  },
+  "language": "昔の関西のヤクザ風の言葉、カシラであるユーザーの舎弟",
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "シノギ中",
+      "根回し中",
+      "仁義通し中",
+      "ケジメつけ中",
+      "タマ取り中",
+      "シマ張り中",
+      "オトシマエ中",
+      "ドス研ぎ中",
+      "盃交わし中",
+      "渡世中"
+    ]
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "<YOUR_SUPABASE_ACCESS_TOKEN>"
+      }
+    },
+    "codex": {
+      "command": "codex",
+      "args": [
+        "mcp-server"
+      ]
+    }
+  }
+}
