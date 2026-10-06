@@ -9,6 +9,7 @@ Claude Code の自作スキル、コマンド、フック、ターミナル設�
 .
 ├── skills/                     # Claude Code カスタムスキル
 │   ├── analyze-publish/        # 研究データ解析→論文用パッケージ作成
+│   ├── goal-creater/           # 負債棚卸し→別モデル向けリファクタ指示書
 │   ├── html-to-pdf/            # HTML→PDF変換（Chrome headless）
 │   ├── humanize-ja/            # AI文章→自然な日本語にリライト
 │   ├── nanobanana/             # Gemini API 画像生成
@@ -48,6 +49,7 @@ chmod +x install.sh
 | スキル | 用途 | トリガー |
 |--------|------|----------|
 | analyze-publish | 研究データ解析→論文図・READMEパッケージ作成 | `/analyze-publish [path]` |
+| goal-creater | 技術的負債を棚卸しし、別モデルに渡すリファクタ指示書 `refactor-instructions.md` を生成（実装はしない） | `/goal-creater [path]`, `リファクタ指示書を作って` |
 | html-to-pdf | HTMLファイルのPDF変換 | `PDFに変換して` |
 | humanize-ja | AI生成日本語のリライト | `/humanize-ja [file]`, `リライトして` |
 | nanobanana | Gemini APIで画像生成 | `/nanobanana`, `画像を作って` |
